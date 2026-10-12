@@ -179,7 +179,8 @@
       "ttft_s": 0.12,
       "functional_pass": true
     },
-    "default_suite_row_copy": "18043 passed, 238 skipped, 5 DSpark failures reproduced on main."
+    "default_suite_row_copy": "18043 passed, 238 skipped, 5 DSpark failures reproduced on main.",
+    "default_suite_combined": "18047 passed, 238 skipped, 5 DSpark failures reproduced on main; pytest -n3 --dist loadgroup, 357.90 seconds"
   },
   "mlx-serve-mtp": {
     "contexts": {
