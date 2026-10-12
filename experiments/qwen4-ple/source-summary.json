@@ -1,0 +1,184 @@
+{
+  "main": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1717.685,
+        "decode_tps": 100.93,
+        "client_ttft_s": 1.170686145502259,
+        "wall_s": 2.9608467710058903
+      },
+      "8000": {
+        "prefill_tps": 2035.5900000000001,
+        "decode_tps": 99.91,
+        "client_ttft_s": 3.9473716460051946,
+        "wall_s": 5.626121062494349
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": null,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "main-control": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1698.345,
+        "decode_tps": 105.535,
+        "client_ttft_s": 1.1848617704818025,
+        "wall_s": 2.7448951880069217
+      },
+      "8000": {
+        "prefill_tps": 2073.545,
+        "decode_tps": 102.175,
+        "client_ttft_s": 3.874342750001233,
+        "wall_s": 5.559185603997321
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": 88.09155461005867,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "row-copy": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1716.8,
+        "decode_tps": 97.78999999999999,
+        "client_ttft_s": 1.1720309994998388,
+        "wall_s": 3.0154529579886002
+      },
+      "8000": {
+        "prefill_tps": 1956.9250000000002,
+        "decode_tps": 100.00999999999999,
+        "client_ttft_s": 4.103931250007008,
+        "wall_s": 5.816682208504062
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": 88.06550867762417,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "page-batches": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1738.495,
+        "decode_tps": 106.5,
+        "client_ttft_s": 1.1561242289899383,
+        "wall_s": 2.6820378954871558
+      },
+      "8000": {
+        "prefill_tps": 2074.17,
+        "decode_tps": 103.33500000000001,
+        "client_ttft_s": 3.875815354505903,
+        "wall_s": 5.4939292289927835
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": 88.05901624076068,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "layout-cache": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1749.93,
+        "decode_tps": 107.725,
+        "client_ttft_s": 1.1491718124889303,
+        "wall_s": 2.6711095000064233
+      },
+      "8000": {
+        "prefill_tps": 2087.995,
+        "decode_tps": 102.37,
+        "client_ttft_s": 3.8443013750074897,
+        "wall_s": 5.494489958495251
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": 88.05822278838605,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "combined": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 1747.12,
+        "decode_tps": 107.21000000000001,
+        "client_ttft_s": 1.1509497285005637,
+        "wall_s": 2.6919150829926366
+      },
+      "8000": {
+        "prefill_tps": 2086.75,
+        "decode_tps": 100.53999999999999,
+        "client_ttft_s": 3.8508659374929266,
+        "wall_s": 5.486005187500268
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "cached_tokens": [
+      0
+    ],
+    "mtp_confirmed": true,
+    "peak_sampled_process_gib": 88.01160366367549,
+    "lru_complexity": "Generated list-based LRU violates O(1); functional behavior passed."
+  },
+  "setup": {
+    "base": "f3ad34d2fcaeb85b0469e291ab370a7f01bc8d64",
+    "chip": "M5 Max",
+    "ram_gib": 128,
+    "python": "3.12.14",
+    "mlx": "0.32.3",
+    "model": "mlx-community/Qwen3.8-Flash-Next-Uncensored-oQ5e-mtp",
+    "revision": "c7d915c693e37fa11810d600b617adb4c36ff596",
+    "bits_per_weight": 5.72,
+    "mtp": true,
+    "mtp_max_depth": 3,
+    "ple": "SSD",
+    "kv": "TurboQuant 4-bit; skip last",
+    "thinking": false,
+    "temperature": 0,
+    "concurrency": 1,
+    "reps": 2,
+    "contexts": [
+      2000,
+      8000
+    ],
+    "tasks": [
+      "Paris premise",
+      "quicksort",
+      "merge intervals",
+      "LRU",
+      "topological sort"
+    ],
+    "output_tokens": "7 factual; 92-207 coding; max_tokens 96 factual/1200 coding",
+    "cache": "Empty SSD prefix directory per build; cached_tokens=0 in every measured trial. OS page cache warm after one unscored 8k/256-token warmup.",
+    "aggregate": "Median of 8 coding responses per context per build; factual response excluded. End-to-end differences are not proof of causal speedup.",
+    "prefix_reuse": {
+      "cached_tokens": 7993,
+      "ttft_s": 0.12,
+      "functional_pass": true
+    },
+    "default_suite_row_copy": "18043 passed, 238 skipped, 5 DSpark failures reproduced on main."
+  }
+}
