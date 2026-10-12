@@ -3568,25 +3568,39 @@ class DiskBackedShardedEmbedding(nn.Module):
                 group_size,
             )
 
+        # Shard layouts are immutable after load. Avoid repeated dtype queries
+        # and layout comparisons on each prefill chunk and decode step.
+        self._shard_offsets_array = np.asarray(self.shard_offsets, dtype=np.int64)
+        self._shard_layouts = tuple(
+            (
+                spec[3],
+                spec[4],
+                tuple(
+                    self._tensor_readers[key].tensor_dtype(key)
+                    for key in spec[: (1 if spec[3] is None else 3)]
+                ),
+            )
+            for spec in self._shard_specs.values()
+        )
+        self._uniform_layout = all(
+            layout == self._shard_layouts[0] for layout in self._shard_layouts
+        )
+
     def _plan(self, host: np.ndarray):
         """Shards, local rows and tensor families for a chunk; None when the touched shards differ."""
-        offsets = np.asarray(self.shard_offsets, dtype=np.int64)
+        offsets = self._shard_offsets_array
         shard = np.searchsorted(offsets, host, side="right") - 1
         local = host - offsets[shard]
         touched = [int(index) for index in np.unique(shard)]
         specs = [self._shard_specs[index] for index in touched]
-        bits, group_size = specs[0][3], specs[0][4]
-        families = [0] if bits is None else [0, 1, 2]
-        dtypes = {
-            family: self._tensor_readers[specs[0][family]].tensor_dtype(specs[0][family])
-            for family in families
-        }
-        if any(spec[3:] != (bits, group_size) for spec in specs) or any(
-            self._tensor_readers[spec[family]].tensor_dtype(spec[family]) != dtypes[family]
-            for spec in specs
-            for family in families
+        layout = self._shard_layouts[touched[0]]
+        if not self._uniform_layout and any(
+            self._shard_layouts[index] != layout for index in touched
         ):
             return None
+        bits, group_size, types = layout
+        families = tuple(range(len(types)))
+        dtypes = dict(enumerate(types))
         return shard, local, touched, specs, families, dtypes, bits, group_size
 
     def _assemble(self, host: np.ndarray, plan) -> dict[int, np.ndarray]:
