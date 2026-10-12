@@ -180,5 +180,38 @@
       "functional_pass": true
     },
     "default_suite_row_copy": "18043 passed, 238 skipped, 5 DSpark failures reproduced on main."
+  },
+  "mlx-serve-mtp": {
+    "contexts": {
+      "2000": {
+        "prefill_tps": 2054.8615,
+        "decode_tps": 134.62349999999998,
+        "client_ttft_s": 0.9771305624890374,
+        "wall_s": 2.2865018124866765
+      },
+      "8000": {
+        "prefill_tps": 2325.094,
+        "decode_tps": 128.8385,
+        "client_ttft_s": 3.4468109589943197,
+        "wall_s": 4.962249229487497
+      }
+    },
+    "coding_functional_passes": 16,
+    "coding_total": 16,
+    "mtp_confirmed": true,
+    "settings": {
+      "version": "26.10.1",
+      "model": "ddalcu/Qwen3.8-Flash-Next-MLX-Serve-iQ-MLX-4.7bpw",
+      "bpw": 4.68,
+      "mtp": true,
+      "mtp_max_depth": 6,
+      "kv": "off",
+      "pld": false,
+      "drafter": false,
+      "concurrency": 1,
+      "temperature": 0,
+      "thinking": false
+    },
+    "comparison_limit": "Model quantization, PLE representation, KV type and max MTP depth differ from oMLX. These numbers compare two installed setups, not abliteration or backend speed alone."
   }
 }
