@@ -1,0 +1,185 @@
+{
+  "main": "f3ad34d2fcaeb85b0469e291ab370a7f01bc8d64",
+  "candidate": "5fe222c",
+  "hardware": "M5 Max / 128 GiB",
+  "mlx": "0.32.3",
+  "mtp_only": true,
+  "settings": {
+    "d3-tq": {
+      "2000": {
+        "prefill_tps": 1784.925,
+        "decode_tps": 101.875,
+        "client_ttft_s": 1.1257,
+        "client_decode_tps": 101.9248
+      },
+      "8000": {
+        "prefill_tps": 2127.84,
+        "decode_tps": 101.15,
+        "client_ttft_s": 3.7729,
+        "client_decode_tps": 101.1897
+      }
+    },
+    "d3-control": {
+      "2000": {
+        "prefill_tps": 1815.16,
+        "decode_tps": 109.045,
+        "client_ttft_s": 1.1072,
+        "client_decode_tps": 109.0988
+      },
+      "8000": {
+        "prefill_tps": 2123.61,
+        "decode_tps": 101.74,
+        "client_ttft_s": 3.7836,
+        "client_decode_tps": 101.7768
+      }
+    },
+    "d6-tq": {
+      "2000": {
+        "prefill_tps": 1764.01,
+        "decode_tps": 106.455,
+        "client_ttft_s": 1.1393,
+        "client_decode_tps": 106.5092
+      },
+      "8000": {
+        "prefill_tps": 2077.63,
+        "decode_tps": 101.975,
+        "client_ttft_s": 3.8676,
+        "client_decode_tps": 101.99
+      }
+    },
+    "d6-kv": {
+      "2000": {
+        "prefill_tps": 1809.4,
+        "decode_tps": 108.64,
+        "client_ttft_s": 1.1108,
+        "client_decode_tps": 108.6769
+      },
+      "8000": {
+        "prefill_tps": 2160.77,
+        "decode_tps": 104.305,
+        "client_ttft_s": 3.717,
+        "client_decode_tps": 104.3164
+      }
+    },
+    "main-fixed6": {
+      "2000": {
+        "prefill_tps": 1786.26,
+        "decode_tps": 108.53,
+        "client_ttft_s": 1.125,
+        "client_decode_tps": 108.587
+      },
+      "8000": {
+        "prefill_tps": 2100.325,
+        "decode_tps": 92.66,
+        "client_ttft_s": 3.8225,
+        "client_decode_tps": 92.6935
+      }
+    },
+    "tail-fixed6": {
+      "2000": {
+        "prefill_tps": 1808.705,
+        "decode_tps": 111.62,
+        "client_ttft_s": 1.1118,
+        "client_decode_tps": 111.6704
+      },
+      "8000": {
+        "prefill_tps": 2152.645,
+        "decode_tps": 98.925,
+        "client_ttft_s": 3.7289,
+        "client_decode_tps": 98.9553
+      }
+    },
+    "main-fixed6-repeat": {
+      "2000": {
+        "prefill_tps": 1750.615,
+        "decode_tps": 109.335,
+        "client_ttft_s": 1.1493,
+        "client_decode_tps": 109.3853
+      },
+      "8000": {
+        "prefill_tps": 1986.435,
+        "decode_tps": 90.38,
+        "client_ttft_s": 4.0444,
+        "client_decode_tps": 90.4235
+      }
+    },
+    "tail-fixed6-repeat": {
+      "2000": {
+        "prefill_tps": 1794.26,
+        "decode_tps": 110.79,
+        "client_ttft_s": 1.1211,
+        "client_decode_tps": 110.8334
+      },
+      "8000": {
+        "prefill_tps": 2132.37,
+        "decode_tps": 96.745,
+        "client_ttft_s": 3.7664,
+        "client_decode_tps": 96.7849
+      }
+    },
+    "tail-adaptive6": {
+      "2000": {
+        "prefill_tps": 1804.195,
+        "decode_tps": 109.905,
+        "client_ttft_s": 1.1138,
+        "client_decode_tps": 109.9469
+      },
+      "8000": {
+        "prefill_tps": 2109.29,
+        "decode_tps": 101.87,
+        "client_ttft_s": 3.8087,
+        "client_decode_tps": 101.8966
+      }
+    },
+    "iq-main": {
+      "2000": {
+        "prefill_tps": 1873.735,
+        "decode_tps": 101.7,
+        "client_ttft_s": 1.075,
+        "client_decode_tps": 101.7552
+      },
+      "8000": {
+        "prefill_tps": 2085.485,
+        "decode_tps": 92.275,
+        "client_ttft_s": 3.8509,
+        "client_decode_tps": 92.3423
+      }
+    },
+    "iq-native": {
+      "2000": {
+        "prefill_tps": 2238.4895,
+        "decode_tps": 143.095,
+        "client_ttft_s": 0.8953,
+        "client_decode_tps": 137.6761
+      },
+      "8000": {
+        "prefill_tps": 2620.214,
+        "decode_tps": 138.8415,
+        "client_ttft_s": 3.0566,
+        "client_decode_tps": 134.4942
+      }
+    }
+  },
+  "paired": {
+    "2000": {
+      "legacy_median_decode_tps": 107.64,
+      "candidate_median_decode_tps": 106.5,
+      "geometric_mean_paired_change_percent": 6.255118968974593,
+      "median_paired_change_percent": 1.8983326700190317
+    },
+    "8000": {
+      "legacy_median_decode_tps": 101.545,
+      "candidate_median_decode_tps": 102.525,
+      "geometric_mean_paired_change_percent": 0.7199759703501396,
+      "median_paired_change_percent": 2.116777152859639
+    }
+  },
+  "validation": {
+    "focused": "170 passed",
+    "coding_pairs": "16/16 passed, identical output",
+    "prefix_reuse": "8016 cached prompt tokens; streamed quicksort passed",
+    "full_suite": "Interrupted at about 24%; host froze and user restarted it; not passed"
+  },
+  "method": "Coding requests only in aggregates: four tasks, two repetitions, 2k/8k contexts, greedy MTP. Paired test alternates legacy/candidate geometry in one warmed process with prefix cache disabled, fixed depth 6, TQ4 and aggressive memory tier. Separate blocks used balanced tier except named repeat blocks. All models were unloaded before GPU unit tests. Rate variance prevents a conclusive whole-model speedup claim.",
+  "same_weights_method": "Original tensor values in both engines. oMLX adapter infers existing quantization widths and relabels the unchanged external PLE table as one safetensors shard. Both adaptive max depth 6 and ordinary KV. This identifies a setup/engine difference, not a kernel-by-kernel cost split."
+}
