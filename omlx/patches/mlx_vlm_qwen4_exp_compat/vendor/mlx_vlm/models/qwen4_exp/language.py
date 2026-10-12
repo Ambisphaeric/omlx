@@ -3358,8 +3358,9 @@ class _SafeTensorMMap:
         futures = []
         try:
             # Preserve page-read parallelism without one Future per page.
-            for pages in np.array_split(fresh, min(fresh.size, _PLE_IO_WORKERS)):
-                futures.append(_PLE_IO_POOL.submit(touch, pages))
+            task_count = min(fresh.size, _PLE_IO_WORKERS)
+            for index in range(task_count):
+                futures.append(_PLE_IO_POOL.submit(touch, fresh[index::task_count]))
             for future in futures:
                 future.result()
         finally:
